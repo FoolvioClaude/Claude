@@ -1,0 +1,44 @@
+feature,area,priority,original,clone,notes
+Login no painel (um usuário),onboarding,must,yes,no,clone é de uso próprio: sem cadastro aberto
+Conectar conta Instagram profissional via OAuth,conexão,must,yes,no,Instagram Login; permissões basic + manage_messages + manage_comments
+Renovar token automaticamente e avisar antes de expirar,conexão,must,yes,no,token longo dura ~60 dias
+Receber webhooks de comentários e mensagens,motor,must,yes,no,campos comments messages messaging_postbacks
+Deduplicar webhooks e garantir 1 DM por pessoa por automação,motor,must,yes,no,causa comum de spam e de execuções duplicadas
+Ignorar comentários e ecos da própria conta,motor,must,yes,no,
+Lista de automações com ligar/pausar,automações,must,yes,no,S03
+Gatilho de comentário em post ou Reel específico,comentários,must,yes,no,S05 + S06
+Gatilho em qualquer post,comentários,must,yes,no,no ManyChat é recurso pago
+Regra: qualquer comentário ou contém palavras (sem diferenciar maiúsculas e acentos),comentários,must,yes,no,S07
+Resposta pública no comentário,comentários,must,yes,no,S08
+Várias variações de resposta pública sorteadas,comentários,must,yes,no,evita respostas idênticas
+DM de abertura via private reply com botão,DM,must,yes,no,abre a janela de 24 h quando tocam no botão
+Mensagem com link após o toque no botão,DM,must,yes,no,
+Gatilho de palavra-chave no Direct,DM,must,yes,no,S10
+Registro de execuções com status e erro,resultados,must,yes,no,S14; base para os números
+Números por automação (comentários; DMs enviadas; cliques; CTR),resultados,must,yes,no,S14
+Pedir para seguir antes de mandar o link (follow gate),DM,should,yes,no,is_user_follow_business; só após interação na DM
+Gatilho no próximo post publicado,comentários,should,yes,no,confiança média de que é assim no original
+Palavras de exclusão,comentários,should,yes,no,
+Resposta padrão para DM sem palavra-chave,DM,should,yes,no,S11; limitar frequência por contato
+Atraso antes da mensagem,DM,should,yes,no,original permite até ~10 min
+Lista de contatos com origem e se segue,contatos,should,yes,no,S12
+Histórico do contato,contatos,should,yes,no,S13
+Exportar contatos em CSV,contatos,should,yes,no,
+Painel de saúde (último webhook; erros da API; enviar teste),diagnóstico,should,no,no,não existe no ManyChat; resolve a reclamação "0 execuções"
+Pré-visualização estilo celular da DM e da resposta,editor,should,yes,no,
+Gatilho em comentários de Live,comentários,could,yes,no,private reply só durante a live
+Gatilho de resposta a story,stories,could,yes,no,fora do pedido original; fácil de adicionar depois
+Gatilho de menção em story,stories,could,yes,no,
+Ice breakers (perguntas prontas no Direct),DM,could,yes,no,máx. 4; só no app mobile
+Tags automáticas no contato,contatos,could,yes,no,
+Cards com imagem e vários botões,DM,could,yes,no,template genérico: 10 cards x 3 botões
+Teste A/B de mensagens (randomizer),editor,could,yes,no,
+Inbox / Live Chat completo,inbox,skip,yes,skip,o próprio app do Instagram já faz isso para uma conta
+Facebook Messenger WhatsApp TikTok Telegram,canais,skip,yes,skip,fora da fatia
+Gatilhos de anúncios Click-to-DM,anúncios,skip,yes,skip,exige Ads API e outra revisão da Meta
+Respostas com IA do ManyChat,IA,skip,yes,skip,fora da fatia; pode virar recurso próprio depois
+Biblioteca de templates do ManyChat,templates,skip,yes,skip,conteúdo deles
+Marketplace de integrações,integrações,skip,yes,skip,rede de parceiros deles
+Multi-conta / agências / planos e cobrança,conta,skip,yes,skip,uso próprio de uma conta
+Broadcasts e sequências,marketing,skip,yes,skip,Meta restringe mensagens fora da janela de 24 h
+Marca textos e ícones do ManyChat,marca,skip,yes,skip,o clone tem identidade própria
